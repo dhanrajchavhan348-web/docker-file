@@ -1,16 +1,22 @@
+
+### **Create Pod Using YAML**
+
+
 FROM nginx:latest
 
-ENV APP_HOME=/usr/share/nginx/html/
+ENV APP_HOME=/usr/share/nginx/html
 
-WORKDIR usr/share/nginx/html
+WORKDIR /usr/share/nginx/html
 
-COPY index.html /usr/share/nginx/html/
+COPY index.html .
 
-RUN apt-get update -y
+EXPOSE 80
 
-EXPOSE 80 
+CMD ["nginx", "-g", "daemon off;"]
 
-CMD ["nginx","-g","daemon off;"]
 
-  
+**build the file**
 
+```bash
+docker build -t my_nginx .
+```
