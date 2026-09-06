@@ -13,6 +13,4 @@ EXPOSE 80
 CMD ["nginx","-g","daemon off;"]
 
   
-  
-  ***Build the Docker Image***
-'''docker build -t my-nginx .'''
+
