@@ -1,5 +1,5 @@
 
-### **Create Pod Using YAML**
+### **Create the Docker file for nginx**
 
 ```bash
 FROM nginx:latest
